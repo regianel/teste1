@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comércio XYZ</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f9f9f9;
+        }
+
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header h1 {
+            font-size: 24px;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+        }
+
+        nav ul li {
+            margin-left: 20px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        /* Botão do menu para celular */
+        .menu-toggle {
+            display: none;
+            background-color: white;
+            border: none;
+            font-size: 30px;
+            cursor: pointer;
+            color: #4CAF50;
+        }
+
+        /* Estilo para a seção */
+        section {
+            padding: 40px;
+            background-color: #ffffff;
+            margin: 20px auto;
+            max-width: 1000px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        section h2 {
+            color: #4CAF50;
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+
+        section p {
+            font-size: 18px;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 20px;
+        }
+
+        footer p {
+            margin-bottom: 5px;
+        }
+
+        footer a {
+            color: #4CAF50;
+            text-decoration: none;
+        }
+
+        /* Estilos para responsividade */
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+                display: none; /* Esconder menu inicialmente no celular */
+                width: 100%;
+            }
+
+            nav ul li {
+                margin-left: 0;
+                text-align: center;
+                padding: 10px 0;
+                border-bottom: 1px solid #ddd;
+            }
+
+            .menu-toggle {
+                display: block;
+            }
+
+            nav ul.active {
+                display: flex;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Comércio XYZ</h1>
+    <button class="menu-toggle" id="menu-toggle">&#9776;</button>
+    <nav>
+        <ul id="menu">
+            <li><a href="#home">Início</a></li>
+            <li><a href="#sobre">Sobre Nós</a></li>
+            <li><a href="#produtos">Produtos</a></li>
+            <li><a href="#contato">Contato</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section id="home">
+    <h2>Bem-vindo ao Comércio XYZ!</h2>
+    <p>
+        Somos uma loja especializada em fornecer os melhores produtos para nossos clientes. Com uma variedade extensa e de alta qualidade, estamos aqui para atender todas as suas necessidades.
+    </p>
+    <p>
+        Navegue pelo nosso site para saber mais sobre quem somos, os produtos que oferecemos e como entrar em contato conosco. Nossa equipe está sempre pronta para atender você com eficiência e cordialidade!
+    </p>
+</section>
+
+<section id="sobre">
+    <h2>Sobre Nós</h2>
+    <p>
+        No Comércio XYZ, temos mais de 10 anos de experiência no mercado, sempre focados em oferecer os melhores produtos e o melhor atendimento aos nossos clientes. Nossa missão é garantir que você encontre exatamente o que precisa, com o melhor custo-benefício e rapidez no atendimento.
+    </p>
+</section>
+
+<section id="produtos">
+    <h2>Nossos Produtos</h2>
+    <p>
+        Oferecemos uma grande variedade de produtos, desde itens para o dia a dia até soluções específicas para as suas necessidades. Confira nossa linha de produtos:
+    </p>
+    <ul>
+        <li>Eletrônicos</li>
+        <li>Moda e Acessórios</li>
+        <li>Casa e Decoração</li>
+        <li>Beleza e Cuidados Pessoais</li>
+        <li>Brinquedos e Jogos</li>
+    </ul>
+</section>
+
+<section id="contato">
+    <h2>Contato</h2>
+    <p>
+        Quer saber mais sobre nossos produtos ou tem alguma dúvida? Entre em contato conosco pelos seguintes meios:
+    </p>
+    <p>
+        <strong>Email:</strong> contato@comercioxyz.com.br<br>
+        <strong>Telefone:</strong> (11) 1234-5678<br>
+        <strong>Endereço:</strong> Rua do Comércio, 100, São Paulo - SP
+    </p>
+</section>
+
+<footer>
+    <p>&copy; 2024 Comércio XYZ. Todos os direitos reservados.</p>
+    <p>Visite nossas redes sociais: <a href="#">Instagram</a> | <a href="#">Facebook</a> | <a href="#">Twitter</a></p>
+</footer>
+
+<script>
+    const menuToggle = document.getElementById('menu-toggle');
+    const menu = document.getElementById('menu');
+
+    menuToggle.addEventListener('click', () => {
+        menu.classList.toggle('active');
+    });
+</script>
+
+</body>
+</html>
